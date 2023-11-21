@@ -27,10 +27,10 @@ function createUser() {
   axios.post("https://8080-silasprd-springboot3lab-jify8drhbbp.ws-us106.gitpod.io/usuario", user)
     .then(response => {
       console.log(response)
-      window.alert("Usuário criado com sucesso!")
+      alert("Usuário criado com sucesso!")
     }).catch(error => {
       console.log(error)
-      window.alert("Erro ao criar usuário!")
+      alert("Erro ao criar usuário!")
     })
   
 }
