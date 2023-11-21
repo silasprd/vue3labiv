@@ -37,8 +37,9 @@ function updateUser(){
     console.log(usuario)
     axios.put(`https://8080-silasprd-springboot3lab-jify8drhbbp.ws-us106.gitpod.io/usuario/${router.currentRoute.value.params.id}`, usuario)
         .then(response => {
-            console.log(response)
-            alert("Usuário atualizado com sucesso!")
+            if(response.status == 200){
+                alert("Usuário atualizado com sucesso!")
+            }
         }).catch(error => {
             console.log(error)
             alert("Erro ao atualizar usuário!")
